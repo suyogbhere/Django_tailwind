@@ -7,7 +7,7 @@
     <title>Signup Page</title>
     {% tailwind_css %}
 </head>
-<body class="bg-black">
+<body class="bg-gray-200">
     {% if messages %}
     {% for message in messages %}
         <p {% if message.tags %} class="alert alert-{{message.tags}} mt-3 alert-dismissible fade show" {% endif %} role="alert">{{message}}
@@ -24,46 +24,46 @@
           </p>
       {% endfor %}
     {% endif %}
-    <div class="flex min-h-full flex-col px-6 py-12 justify-center lg:px-8">
-        <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-            <h2 class="text-center mt-5 font-bold tracking-tight  text-2xl/9 text-white"> Signup Page</h2>
-        </div>
-        <div class="sm:mx-auto mt-9 sm:w-full sm:max-w-sm">
+    <div class="flex min-h-full flex-col px-6 py-12 justify-center lg:px-8 ">
+        <div class="sm:mx-auto mt-2 sm:w-full sm:max-w-sm p-8 bg-white rounded-md">
+            <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+                <h2 class="text-center mt-2 font-bold tracking-tight  text-2xl/9"> Signup Page</h2>
+            </div>
             <form action="" method="post" novalidate>
                 {% csrf_token %}
                 <div class="form-group">
-                    <label for="{{ form.username.id_for_label }}" class="text-white">{{ form.username.label }}</label>
+                    <label for="{{ form.username.id_for_label }}" >{{ form.username.label }}</label>
                     <div>
                         <input type="text" name="username" class="form-input flex w-full justify-center rounded-lg border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500" autofocus maxlength="150" required aria-describedby="id_username_helptext" id="id_username">
                     </div>
                     
                 </div>
                 <div class="form-group">
-                    <label for="{{ form.first_name.id_for_label }}" class="text-white">{{ form.first_name.label }}</label>
+                    <label for="{{ form.first_name.id_for_label }}" >{{ form.first_name.label }}</label>
                     <div>
                         <input type="text" name="first_name" class="form-input flex w-full justify-center rounded-lg border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500" autofocus maxlength="150" id="id_first_name">
                     </div>
                 </div> 
                 <div class="form-group">
-                    <label for="{{ form.last_name.id_for_label }}" class="text-white">{{ form.last_name.label }}</label>
+                    <label for="{{ form.last_name.id_for_label }}" >{{ form.last_name.label }}</label>
                     <div>
                         <input type="text" name="last_name" class="form-input flex w-full justify-center rounded-lg border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500" autofocus maxlength="150" id="id_last_name">
                     </div>
                 </div> 
                 <div class="form-group">
-                    <label for="{{ form.email.id_for_label }}" class="text-white">{{ form.email.label }}</label>
+                    <label for="{{ form.email.id_for_label }}" >{{ form.email.label }}</label>
                     <div>
                         <input type="text" name="last_name" class="form-input flex w-full justify-center rounded-lg border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500" autofocus maxlength="150" id="id_last_name">
                     </div>
                 </div> 
                 <div class="form-group">
-                    <label for="{{ form.password1.id_for_label }}" class="text-white">{{ form.password1.label }}</label>
+                    <label for="{{ form.password1.id_for_label }}" >{{ form.password1.label }}</label>
                     <div>
                         <input type="password" name="password1" class="&quot;class&quot;:&quot; flex w-full justify-center form-input rounded-lg border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500&quot;,&quot;autofocus&quot;:True" required id="id_password1">
                     </div>
                 </div> 
                 <div class="form-group">
-                    <label for="{{ form.password2.id_for_label }}" class="text-white">{{ form.password2.label }}</label>
+                    <label for="{{ form.password2.id_for_label }}" >{{ form.password2.label }}</label>
                     <div>
                         <input type="password" name="password2" class="&quot;class&quot;:&quot; flex w-full justify-center form-input rounded-lg border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500&quot;,&quot;autofocus&quot;:True" required id="id_password2">
                     </div>
